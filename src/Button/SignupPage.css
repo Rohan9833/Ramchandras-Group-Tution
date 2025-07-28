@@ -1,0 +1,113 @@
+.signup-page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 50%, #2d2a4a, #1b1837);
+  padding: 0 15px; 
+}
+
+.signup-box {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);  
+  border-radius: 20px; 
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.signup-box h2 {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.signup-box p {
+  color: #cfcfcf;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.signup-box input {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  color: #ffffff;
+  outline: none;
+}
+
+.signup-box input::placeholder {
+  color: #d3d3d3;
+}
+
+.signup-box button {
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.signup-box button:hover {
+  opacity: 0.8;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+                      /* Responsive Design */
+@media (max-width: 768px) {
+  .signup-page {
+      padding: 0 20px; 
+  }
+
+  .signup-box {
+      padding: 20px; 
+      max-width: 100%; 
+  }
+
+  .signup-box h2 {
+      font-size: 24px; 
+  }
+
+  .signup-box p {
+      font-size: 12px; 
+  }
+
+  .signup-box input,
+  .signup-box button {
+      font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-box {
+      padding: 15px; 
+  }
+
+  .signup-box h2 {
+      font-size: 22px; 
+  }
+
+  .signup-box p {
+      font-size: 11px; 
+  }
+
+  .signup-box input,
+  .signup-box button {
+      font-size: 13px;
+  }
+}

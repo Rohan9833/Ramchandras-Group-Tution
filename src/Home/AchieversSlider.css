@@ -1,0 +1,24 @@
+.outerdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5.5rem;
+}
+.slider-container {
+  width: 700px; 
+  overflow: hidden; 
+  border-radius: 10px;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+
+  transition: transform 1s ease; 
+}
+
+.slider img {
+  width: 700px; 
+  height: auto;
+  flex-shrink: auto; 
+}
