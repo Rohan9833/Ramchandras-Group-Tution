@@ -10,7 +10,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen); 
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
