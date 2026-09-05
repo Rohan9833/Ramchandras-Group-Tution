@@ -7,7 +7,7 @@ function Admission(){
 
             <div className="admissionform">
                 <AdmissionForm />
-            </div>
+            </div> 
             
         </>
     );
