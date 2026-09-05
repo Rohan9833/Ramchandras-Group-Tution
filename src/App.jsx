@@ -34,7 +34,7 @@ const App = () => {
                 <hr />
                 <AchieversSlider />
               </div>
-            </>
+            </>  
           } />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path='/admission' element={<Admission />} />
