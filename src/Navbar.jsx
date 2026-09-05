@@ -56,7 +56,7 @@ const Navbar = () => {
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-        </div>
+        </div>  
 
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item"><Link to="/" onClick={closeMenu}>Home</Link></li>
