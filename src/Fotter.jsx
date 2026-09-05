@@ -9,7 +9,7 @@ const Fotter = () => {
       <footer className="footer">
         <div className="footer-section">
           <h4>Ramchandra's<br></br> Group Tution</h4>
-          
+            
           <p>Nurturing young minds with knowledge, confidence, and the skills to succeed in life.</p>
           <br /><br />
           <p>© 2025 Ramchandra's group Tution. All rights reserved.</p>
