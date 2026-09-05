@@ -14,7 +14,7 @@ import { getAnalytics } from "firebase/analytics";
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA0P1AYaY2KCDwGAIRvtELJu2UTohP833Y",
-  authDomain: "ramchandras-group-tution.firebaseapp.com",
+  authDomain: "ramchandras-group-tution.firebaseapp.com", 
   projectId: "ramchandras-group-tution",
   storageBucket: "ramchandras-group-tution.firebasestorage.app",
   messagingSenderId: "231736731711",
