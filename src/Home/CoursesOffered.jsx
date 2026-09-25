@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Calculator, FlaskConical } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './CoursesOffered.css';
 import Science from '../assets/Science.jpeg';
 import Maths from '../assets/Maths.jpg';
@@ -42,9 +43,7 @@ const CoursesOffered = () => (
               <h3>{title}</h3>
               <p>{description}</p>
               <div className="course-detail">{details}</div>
-              <a href="https://www.ramchandrasgrouptuition.com/" target="_blank" rel="noopener noreferrer">
-                Learn more <ArrowRight size={16} />
-              </a>
+              <Link to="/admission">Learn more <ArrowRight size={16} /></Link>
             </div>
           </article>
         ))}
