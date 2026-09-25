@@ -1,95 +1,17 @@
-
-.admission-form {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  font-size: 24px;
-}
-
-h3 {
-  text-align: center;
-  margin-top: 2em;
-}
-
-#p {
-  text-align: center;
-  color: #555;
-}
-
-hr {
-  margin: 10px 0;
-  border: 0.5px solid #ddd;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.admission{
-    padding-top: 8rem;
-    background: rgb(202, 202, 202);
-    padding-bottom: 8rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.name-fields, .birthdate-fields, .contact-info, .city-state {
-  display: flex;
-  gap: 10px;
-}
-
-.name-fields input, 
-.birthdate-fields select, 
-.contact-info input, 
-.city-state input,
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.gender-options {
-  display: flex;
-  gap: 15px;
-}
-
-.city-state div {
-  width: 48%;
-}
-
-.button {
-  width: 100%;
-  padding: 10px;
-  background: #673E1E;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.button:hover {
-  background: #5a361a;
-}
-
-small {
-  display: block;
-  color: #888;
-}
+.admission { min-height:calc(100vh - 76px); padding:75px 18px 100px; background:linear-gradient(180deg,#eef5f9 0%,#fbfaf7 70%); }
+.admission-form { width:min(760px,100%); margin:auto; padding:42px; background:white; border:1px solid #e2e9ee; border-radius:24px; box-shadow:0 22px 60px rgba(16,42,67,.10); }
+.admission-form h2 { margin:0; color:#102a43; font-family:'Manrope',sans-serif; font-size:30px; text-align:left; }
+#p { margin:8px 0 24px; color:#718296; text-align:left; }
+.admission-form hr { margin:25px 0; border:0; border-top:1px solid #e7edf1; }
+.admission-form h3 { margin:0 0 18px; color:#102a43; font-size:18px; text-align:left; }
+.form-group { margin-bottom:19px; }
+.form-group label { display:block; margin-bottom:7px; color:#344b61; font-size:12px; font-weight:800; }
+.name-fields,.birthdate-fields,.contact-info,.city-state { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.contact-info,.city-state { grid-template-columns:1fr 1fr; }
+.name-fields input,.birthdate-fields select,.contact-info input,.city-state input,.form-group>select,.form-group>input { width:100%; min-height:45px; padding:0 13px; border:1px solid #dce5ec; border-radius:10px; background:#fbfcfd; color:#172b4d; outline:none; }
+.name-fields input:focus,.birthdate-fields select:focus,.contact-info input:focus,.city-state input:focus,.form-group>select:focus,.form-group>input:focus { border-color:#72a9ca; box-shadow:0 0 0 3px #eaf4fb; }
+.gender-options { display:flex; gap:20px; color:#536a7f; font-size:13px; }
+.gender-options label { display:flex; align-items:center; gap:7px; font-weight:600; margin:0; }
+.button { width:100%; min-height:50px; margin-top:8px; border:0; border-radius:11px; background:#102a43; color:white; font-weight:800; cursor:pointer; transition:.2s ease; }
+.button:hover { background:#1769aa; transform:translateY(-1px); }
+@media(max-width:650px){.admission{padding:40px 14px 70px}.admission-form{padding:26px 18px}.name-fields,.birthdate-fields,.contact-info,.city-state{grid-template-columns:1fr}.admission-form h2{font-size:25px}}
