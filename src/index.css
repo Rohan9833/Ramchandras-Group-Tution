@@ -1,124 +1,39 @@
-*{
-  text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-body{
-  background-color: white;
-  font-family: Arial, sans-serif;
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
   overflow-x: hidden;
-}
-/* nav {
-  background-color: #062D44;
-  width: 60vw;
-  height: 30px;       
-  padding: 10px;
-  position: absolute;
-  top: 1em;
-  left: 50%;
-  transform: translateX(-48%);
-  border-radius: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
-                                                  /* Logo */
-/* .logo {
-  padding-top: 10px;
-  margin-left: 20px;
-  color: white;
-  font-size: larger;
-  max-height: 40px;  
-  width: auto;       
+  font-family: 'DM Sans', sans-serif;
+  background: #fbfaf7;
 }
 
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope', sans-serif;
 }
 
-
-.nav-item {
-  color: white;
-  font-size: larger;
-  text-decoration: none;
+img {
+  max-width: 100%;
 }
 
-#home {
-  margin-left: 0;
+::selection {
+  background: #dceef9;
+  color: #102a43;
 }
-
-
-nav button {
-  background-color: #434043;
-  border-radius: 100px;
-  border: none;
-  font-size: 114px;
-  height: 30px;
-  width: 70px;
-  color: white;
-} */
-
-/* Hamburger Menu (Hidden by Default) */
-/* .hamburger {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  nav {
-      width: 90vw;
-      height: auto;
-      flex-direction: column;
-      padding: 15px;
-      text-align: center;
-  }
-
-  .nav-links {
-      flex-direction: column;
-      gap: 15px;
-      display: none; 
-  }
-
-  .nav-links.active {
-      display: flex; 
-  }
-
-  .hamburger {
-      display: block;
-  }
-}  */
-/* #main-img{
-  margin-left: -6px;
-  margin-top: -8px;
-  width: 100vw;
-  z-index: 0;
-  height: 100vh;
-} */
-
-/* #manoj-sir{
-  top: 17vh;
-  left: 80vw;
-  position: absolute;
-  z-index: 1;
-}
-#sanjeve-sir{
-  top:38vh ;
-  left:80vw ;
-  position: absolute;
-  z-index: 1;
-} */
-
-
-
-
-
-
-
