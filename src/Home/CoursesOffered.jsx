@@ -1,50 +1,55 @@
-import React from "react";
-import "./CoursesOffered.css"; 
-import Science from "../assets/Science.jpeg";
-import Maths from "../assets/Maths.jpg";
+import React from 'react';
+import { ArrowRight, Calculator, FlaskConical } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import './CoursesOffered.css';
+import Science from '../assets/Science.jpeg';
+import Maths from '../assets/Maths.jpg';
 
 const courses = [
   {
-    title: "Science",
+    title: 'Science',
+    icon: FlaskConical,
     image: Science,
-    description: "Schedule: Every Day (Sunday to Sunday), including Holidays. Duration: 3 to 4 hours daily.",
-    details: "Commencing from 15th November: Sunday to Sunday and Holidays daily 3 to 4 hrs.",
-    link: "https://www.science.org/",
+    description: 'Focused preparation with concept clarity, revision and regular practice.',
+    details: 'Special batches • 3–4 hours daily',
   },
   {
-    title: "Maths",
+    title: 'Mathematics',
+    icon: Calculator,
     image: Maths,
-    description: "S.L.B. (Serious Learner’s Batches):",
-    details: "Commencing from 1st week of December: Sunday to Sunday and Holidays daily 3 to 4 hrs.",
-    link: "https://math.he.net/",
+    description: 'Build strong fundamentals and solve problems with confidence and method.',
+    details: 'Serious Learner’s Batches • 3–4 hours daily',
   },
-  // {
-  //   title: "Regular Test",
-  //   image: "src/assets/personalised.jpeg",
-  //   description: "Test your knowledge regularly.",
-  //   details: "From 15th April to 31st May: Daily 6 Hours in the Morning or Evening",
-  // },
 ];
 
-const CoursesOffered = () => {
-  return (
-    <div className="parallax">
-      <h2>Specialist</h2>
-      <div className="courses">
-        {courses.map((course, index) => (
-          <div className="course-card" key={index}>
-            <img src={course.image} alt={`${course.title} Course`} />
-            <div className="course-info">
-              <h3>{course.title}</h3>
-              <p><strong>{course.description}</strong></p>
-              <p><strong>{course.details}</strong></p>
-              <a href={course.link}target="_blank" rel="noopener noreferrer">Read More</a>
+const CoursesOffered = () => (
+  <section className="specialist-section">
+    <div className="specialist-backdrop" />
+    <div className="specialist-content">
+      <div className="section-heading specialist-heading">
+        <span className="eyebrow">ACADEMIC SPECIALISTS</span>
+        <h2>Strong fundamentals. Better results.</h2>
+        <p>Dedicated subject-focused support for students who want to understand, practice and improve.</p>
+      </div>
+      <div className="courses-grid">
+        {courses.map(({ title, icon: Icon, image, description, details }) => (
+          <article className="course-card" key={title}>
+            <div className="course-image">
+              <img src={image} alt={title} />
+              <span><Icon size={20} /></span>
             </div>
-          </div>
+            <div className="course-body">
+              <div className="course-kicker">SPECIALIST BATCH</div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <div className="course-detail">{details}</div>
+              <Link to="/admission">Learn more <ArrowRight size={16} /></Link>
+            </div>
+          </article>
         ))}
       </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default CoursesOffered;

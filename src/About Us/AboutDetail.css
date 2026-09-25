@@ -1,43 +1,17 @@
-.about-us-section {
-    margin-top: 55px;
-    background: url('/public/about-us.jpg') center/cover no-repeat;
-    background-attachment: fixed;
-    height: 300px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    z-index: -1;
-  }
-  
-  .overlay {
-    background: rgba(0, 0, 0, 0);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .breadcrumb {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .breadcrumb-link {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s;
-  }
-  
-  .breadcrumb-link:hover {
-    color: #ddd;
-  }
-  
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-  }
+.about-hero {
+  position: relative;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: #0b2539;
+}
+.about-hero-bg { position:absolute; inset:0; background:linear-gradient(90deg,rgba(7,26,42,.93),rgba(7,26,42,.55)),url('/about-us.jpg') center/cover; }
+.about-hero-content { position:relative; width:min(1080px,calc(100% - 48px)); margin:0 auto; padding:90px 0 60px; }
+.about-breadcrumb { display:flex; gap:10px; color:#a9bfce; font-size:12px; margin-bottom:28px; }
+.about-breadcrumb a { color:white; }
+.about-hero .eyebrow { color:#f1c66f; font-size:11px; font-weight:800; letter-spacing:.16em; }
+.about-hero h1 { margin:14px 0 16px; font-size:clamp(42px,6vw,68px); line-height:1.02; letter-spacing:-.05em; }
+.about-hero h1 em { color:#f1c66f; font-style:normal; }
+.about-hero p { max-width:590px; margin:0; color:rgba(255,255,255,.72); font-size:17px; line-height:1.7; }

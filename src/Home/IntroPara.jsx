@@ -1,56 +1,29 @@
-import React, { useEffect, useRef } from "react";
-import "./IntroPara.css";
+import React from 'react';
+import { ArrowUpRight, GraduationCap, UsersRound } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import './IntroPara.css';
 
-const IntroPara = () => {
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
-
-  useEffect(() => {
-    const options = {
-      root: null, 
-      rootMargin: "0px",
-      threshold: 0.2, 
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("slide-down");
-          observer.unobserve(entry.target); 
-        }
-      });
-    }, options);
-
-    if (leftRef.current) observer.observe(leftRef.current);
-    if (rightRef.current) observer.observe(rightRef.current);
-
-    return () => {
-      if (leftRef.current) observer.unobserve(leftRef.current);
-      if (rightRef.current) observer.unobserve(rightRef.current);
-    };
-  }, []);
-
-  return (
-    <div className="outer-intro-para">
-      <div className="intro-para">
-        <div className="left" ref={leftRef}>
-          <p>
-            <strong>Ramchandra's Group Tuition</strong> provides high-quality education for Classes 6th to 10th,  
-            with expert guidance and interactive learning to make studies effective and accessible.
-          </p>  
-        </div>
-        <div className="right" ref={rightRef}>
-          <p>
-            Ramchandra, the founder and driving force behind <strong>Ramchandra's Group Tuition</strong>,
-            started with a vision to provide quality education to students. With dedication and a passion
-            for teaching, the institute has grown, earning the trust of parents and students alike.
-            The commitment to academic excellence and personalized learning continues to be the foundation 
-            of its success.
-          </p>
+const IntroPara = () => (
+  <section className="intro-section">
+    <div className="intro-inner">
+      <div className="intro-lead">
+        <span className="eyebrow">WHY RAMCHANDRA'S</span>
+        <h2>A stronger foundation for the years that matter.</h2>
+        <Link to="/about-us" className="text-link">Meet our approach <ArrowUpRight size={17} /></Link>
+      </div>
+      <div className="intro-copy">
+        <p>
+          Ramchandra's Group Tuition provides focused academic support for Classes 6th to 10th,
+          combining clear explanations, active practice and a learning environment where students
+          feel comfortable asking questions.
+        </p>
+        <div className="intro-stats">
+          <div><GraduationCap size={22} /><span><strong>Classes 6–10</strong>Academic support</span></div>
+          <div><UsersRound size={22} /><span><strong>Personal attention</strong>Small-group learning</span></div>
         </div>
       </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default IntroPara;

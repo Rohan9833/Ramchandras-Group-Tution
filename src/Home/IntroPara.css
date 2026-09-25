@@ -1,56 +1,103 @@
-.outer-intro-para {
-  display: flex;
-  justify-content: center;
+.intro-section {
+  padding: 110px 24px;
+  background: #fbfaf7;
+}
+
+.intro-inner {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 100px;
   align-items: center;
-  padding: 20px;
-  margin-top: 5rem;
 }
 
-.intro-para {
-  display: flex;
-  max-width: 1100px;
-  width: 100%;
-  gap: 8em;
+.eyebrow {
+  color: #1769aa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
 }
 
-.left, .right {
-  flex: 1;
-  opacity: 0;                
-  transform: translateY(-30px);
-  transition: opacity 1.2s ease, transform 0.8s ease;
+.intro-lead h2 {
+  margin: 13px 0 24px;
+  color: #102a43;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
 }
 
-.left.slide-down,
-.right.slide-down {
-  opacity: 1;
-  transform: translateY(0);
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #1769aa;
+  font-size: 14px;
+  font-weight: 800;
 }
 
-.left {
-  text-align: left;
+.text-link:hover {
+  color: #102a43;
+}
+
+.intro-copy > p {
+  margin: 0;
+  color: #5e7184;
   font-size: 18px;
-  font-weight: bold;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.85;
 }
 
-.left p strong, .right p strong {
-  color: #673E1E;
+.intro-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
 }
 
-.right {
-  text-align: justify;
-  font-size: 16px;
+.intro-stats > div {
+  display: flex;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #e2e9ee;
+  border-radius: 15px;
+  background: white;
 }
 
-                                                  /* Responsive Design */
-@media (max-width: 768px) {
-  .intro-para {
-    flex-direction: column;
-    text-align: center;
+.intro-stats svg {
+  flex: 0 0 auto;
+  color: #1769aa;
+}
+
+.intro-stats span {
+  display: grid;
+  gap: 3px;
+  color: #718296;
+  font-size: 11px;
+}
+
+.intro-stats strong {
+  color: #102a43;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .intro-section {
+    padding: 78px 20px;
   }
 
-  .left, .right {
-    width: 100%;
+  .intro-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .intro-copy > p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-stats {
+    grid-template-columns: 1fr;
   }
 }
