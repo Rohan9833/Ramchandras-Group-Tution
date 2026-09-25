@@ -1,97 +1,160 @@
-.footer {
-  background-color: #0A2F45;
+.site-footer {
+  background: #071a2a;
   color: white;
+}
+
+.footer-top {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 78px 0 65px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
-  gap: 20px;
-  padding: 40px 20px;
-  width: 100%;
-  /* margin-top: 5em; */
-  box-sizing: border-box;
+  grid-template-columns: 1.35fr .7fr 1.25fr 1fr;
+  gap: 55px;
 }
 
-.footer-section {
+.footer-brand-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
-  p{
-    color: rgba(255, 255, 255, 0.712);
-    font-size: 15px;
-  }
+  gap: 12px;
 }
 
-#address:hover{
-  cursor: pointer;
+.footer-brand-row img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 13px;
+  background: rgba(255,255,255,.08);
 }
 
-.footer-section h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  position: relative;
-  text-align: center;
+.footer-brand-row div {
+  display: grid;
+  gap: 4px;
 }
 
-.footer-section h4::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 2px;
-  background: #1098F0;
-  margin: 4px auto 0;
+.footer-brand-row strong {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+.footer-brand-row span {
+  color: #91a7b9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .18em;
 }
 
-.footer-section ul li {
-  margin: 5px 0;
+.footer-brand > p {
+  max-width: 300px;
+  margin: 20px 0;
+  color: #91a7b9;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
-.footer-section ul li a {
-  color: #bbb;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-size: 0.95rem;
-}
-
-.footer-section ul li a:hover {
-  color: white;
-}
-
-.social-icons {
+.footer-socials {
   display: flex;
-  justify-content: center;
-  gap: 0px;
-  flex-direction: column;
-  margin-top: 10px;
+  gap: 8px;
 }
 
-.social-icons a {
-  color: #bbb;
-
-  font-size: 18px;
-  transition: color 0.3s;
-  img{
-    height: 15px;
-    border-radius: 50%;
-  }
+.footer-socials a {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  color: #b8c8d5;
+  transition: .2s ease;
 }
 
-.social-icons a:hover {
+.footer-socials a:hover {
+  background: #1769aa;
+  border-color: #1769aa;
   color: white;
 }
 
-.fab{
-  margin-top: 10px
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-  .footer {
-    grid-template-columns: repeat(2, 1fr); 
+.footer-column h4 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #91a7b9;
+  font-size: 12px;
+  line-height: 1.5;
+  transition: .2s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-callout {
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  background: rgba(255,255,255,.045);
+}
+
+.footer-callout span {
+  color: #f1c66f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.footer-callout h4 {
+  margin: 9px 0 17px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.footer-callout > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #c8e8fa;
+  font-weight: 800;
+}
+
+.footer-bottom {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 19px 0 23px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #6f8799;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-top {
+    width: min(100% - 36px, 1120px);
+    grid-template-columns: 1fr;
+    padding: 58px 0 45px;
+  }
+
+  .footer-bottom {
+    width: min(100% - 36px, 1120px);
+    flex-direction: column;
   }
 }
