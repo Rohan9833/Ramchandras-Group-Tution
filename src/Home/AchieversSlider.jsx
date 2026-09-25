@@ -1,43 +1,47 @@
-import React, { useEffect, useRef } from "react";
-import "./AchieversSlider.css"; 
-import A from "../assets/a.jpg"
-import B from "../assets/b.jpg"
-import C from "../assets/c.jpg"
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import './AchieversSlider.css';
+import A from '../assets/a.jpg';
+import B from '../assets/b.jpg';
+import C from '../assets/c.jpg';
 
+const images = [A, B, C];
 
 const AchieversSlider = () => {
-  const sliderRef = useRef(null);
+  const [index, setIndex] = useState(0);
+  const timer = useRef(null);
 
   useEffect(() => {
-    const slider = sliderRef.current;
-    let scrollAmount = 0;
-    const scrollWidth = 700;    
+    timer.current = setInterval(() => {
+      setIndex((current) => (current + 1) % images.length);
+    }, 4500);
 
-    const scrollImages = () => {
-      scrollAmount += scrollWidth;
-      if (scrollAmount >= slider.scrollWidth) {
-        scrollAmount = 0; 
-      }
-      
-      slider.style.transform = `translateX(-${scrollAmount}px)`;
-    };
-
-    const interval = setInterval(scrollImages, 3000); 
-
-    return () => clearInterval(interval); 
+    return () => clearInterval(timer.current);
   }, []);
 
   return (
-    <div className="outerdiv">
-      <div className="slider-container">
-      <div className="slider" ref={sliderRef}>
-        <img src={A} alt="Achiever 1" />
-        <img src={B} alt="Achiever 2" />
-        <img src={C} alt="Achiever 3" />
+    <div className="achievers-wrap">
+      <div className="achievers-slider">
+        <div className="achievers-track" style={{ transform: `translateX(-${index * 100}%)` }}>
+          {images.map((image, i) => (
+            <div className="achiever-slide" key={image}>
+              <img src={image} alt={`Student achievement ${i + 1}`} />
+            </div>
+          ))}
+        </div>
+        <button className="slider-arrow left" onClick={() => setIndex((index - 1 + images.length) % images.length)} aria-label="Previous achievement">
+          <ChevronLeft size={20} />
+        </button>
+        <button className="slider-arrow right" onClick={() => setIndex((index + 1) % images.length)} aria-label="Next achievement">
+          <ChevronRight size={20} />
+        </button>
       </div>
+      <div className="slider-dots">
+        {images.map((_, i) => (
+          <button key={i} className={i === index ? 'active' : ''} onClick={() => setIndex(i)} aria-label={`Show achievement ${i + 1}`} />
+        ))}
       </div>
     </div>
-    
   );
 };
 
